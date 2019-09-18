@@ -242,7 +242,7 @@ Citizen.CreateThread(function()
 
         if NetworkDoesNetworkIdExist(O_toNet) then
            if not moneyBlip then
-               
+
               thisBag = NetToObj(O_toNet)
               Wait(200)
               blipName(money_bag_blip,thisBag,108,24,onMapBlipName_money)

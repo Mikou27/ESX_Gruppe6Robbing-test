@@ -7,10 +7,13 @@ local mapZones = {AIRP = "Los Santos International Airport",ALAMO = "Alamo Sea",
 
 RegisterServerEvent('give_ok:give')
 AddEventHandler('give_ok:give', function()
-local reward = math.random(22000,50000)
 local _source = source
-	local robber = ESX.GetPlayerFromId(_source)
-	robber.addMoney(reward)
+local robber = ESX.GetPlayerFromId(_source)
+
+local reward = math.random(22000,50000)
+
+robber.addMoney(reward)
+
 end)
 
 RegisterServerEvent('truckID')
@@ -35,14 +38,13 @@ end)
 
 RegisterServerEvent('Cops')
 AddEventHandler('Cops', function(x,y,z,zone)
-	local RPcops = ESX.GetPlayers()
-    robZone = mapZones[zone]
-	
-	for i=1, #RPcops, 1 do
-		RPcop = ESX.GetPlayerFromId(RPcops[i])
+local RPcops = ESX.GetPlayers()
+local robZone = mapZones[zone]
 
-		if RPcop.job.name == 'police' then
-		   TriggerClientEvent("robbing:notif", -1, robZone)
-		end
-	end
+for i=1, #RPcops, 1 do
+    RPcop = ESX.GetPlayerFromId(RPcops[i])
+    if RPcop.job.name == 'police' then
+       TriggerClientEvent("robbing:notif", -1, robZone)
+    end
+end
 end)
