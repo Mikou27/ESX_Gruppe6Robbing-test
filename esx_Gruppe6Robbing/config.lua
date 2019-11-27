@@ -33,7 +33,7 @@ en = {
 
 spawnNotif = {
 contact = "Informant",
-title = "~r~A dirty job.",
+title = "~r~A Dirty Job.",
 msg = "~g~An Armored Van has just been spotted, prepare your sticky bombs."
 },
 
