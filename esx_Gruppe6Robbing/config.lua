@@ -35,7 +35,7 @@ copsNoClueNofif = "~y~No information on the suspects at this time...",
 config.lang = en
 
 ---------------[SPAWN TIMER]---------------------
-config.spawnTimer = math.random(10000,15000)
+config.spawnTimer = math.random(1200000,1600000)
 
 -------------------------------------------------
 
