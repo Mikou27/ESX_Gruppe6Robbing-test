@@ -10,10 +10,14 @@ AddEventHandler("IsPlyAcop", function()
 local _source = source
 local xPlayer = ESX.GetPlayerFromId(_source)
 local xPlayers = ESX.GetPlayers()
+
+for i=1, #xPlayers, 1 do      
+local xPlayer = ESX.GetPlayerFromId(xPlayers[i])                     
        if xPlayer.job.name == 'police' then
-          TriggerClientEvent("IsCop",-1)
+          TriggerClientEvent("IsCop",xPlayer.source)
        end
-    end)
+    end
+end)              
 
 RegisterServerEvent('giveMoney')
 AddEventHandler('giveMoney', function()
@@ -57,9 +61,15 @@ end)
 
 RegisterServerEvent('Cops')
 AddEventHandler('Cops', function(x,y,z,zone)
-local RPcops = ESX.GetPlayers()
-if RPcop.job.name == 'police' then
+local _source 	= source
+local xPlayer = ESX.GetPlayerFromId(_source)
+local xPlayers = ESX.GetPlayers()
 local robZone = mapZones[zone]
-TriggerClientEvent("robbing:notif", -1, robZone)
-    end
+              
+for i=1, #xPlayers, 1 do  
+local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
+          if xPlayer.job.name == 'police' then         
+          TriggerClientEvent("robbing:notif", xPlayer.source, robZone)
+       end
+    end                 
 end)
