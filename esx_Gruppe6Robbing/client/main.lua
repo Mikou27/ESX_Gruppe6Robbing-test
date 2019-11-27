@@ -227,7 +227,7 @@ Citizen.CreateThread(function()
               --TriggerServerEvent("Cops",robPos.x,robPos.y,robPos.z,zone)
               modelRequest(GetHashKey("prop_money_bag_01"))
               money_bag = CreateObject (GetHashKey("prop_money_bag_01"),pickupos.x, pickupos.y, pickupos.z ,true, true, true)
-              PlaceObjectOnGroundProperly(money_bag )
+              PlaceObjectOnGroundProperly(money_bag)
               FreezeEntityPosition(money_bag ,1)
            end
            Wait(200)
