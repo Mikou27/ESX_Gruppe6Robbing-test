@@ -1,8 +1,34 @@
---Credit yourself here(ex: English translation by "TheNiceGuy") for any translations you've made, and make a pull request on my GitHub.
+--Credit yourself here: Translations and updated ESX version by BronxDre
 
 config = {}
 
 ---------------------------------[locales]-------------------------------------------
+fr = {
+
+spawnNotif = {
+contact = "Informateur",
+title = "~r~Un sale boulot.",
+msg = "~g~Un fourgon blindé vient d'être repéré,prépares tes bombes collantes."
+},
+
+copsSpawnNotif = {
+contact = "Directeur agence Gruppe Sechs",
+title = "~r~Transport de fonds",
+msg = "~g~Un de nos fourgon vient de prendre la route soyez vigilants."
+},
+
+rewardnotif = {"Vous avez reçu ~g~"," ~w~$ d'argent sale."},
+onMapBlipName_truck = "Fourgon blindé",
+copsOnMapBlipName_truck = "Fourgon blindé Gruppe Sechs",
+onMapBlipName_money = "Sac d'argent",
+destroyedTruckNotif = "~r~L'argent a était détruit.",
+cops_notification = "Un braquage de fourgon blindé est en cours à ~y~",
+cops_Collect_money = "~y~Un agent de police a récupérer l'argent du braquage de fourgon blindé.",
+cops_Veh_plate = {"~r~Indice(s) braquage de fourgon","~y~Véhicule potentiellement suspect  :  ~g~","  ~y~Modèle :  ~g~"},
+copsNoClueNofif = "~y~Aucun indice sur le braquage du fourgon pour le moment...",
+
+}
+
 en = {
 
 spawnNotif = {
